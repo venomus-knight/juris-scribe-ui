@@ -5,32 +5,32 @@
 
 @layer base {
   :root {
-    --background: 36 33% 97%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 30 30% 96%;
+    --foreground: 20 10% 5%;
 
-    --card: 36 33% 97%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 30 30% 98%;
+    --card-foreground: 20 10% 5%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 20 10% 5%;
 
-    --primary: 217 71% 23%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 25 60% 25%;
+    --primary-foreground: 30 30% 96%;
 
-    --secondary: 3 60% 25%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 30 20% 15%;
+    --secondary-foreground: 30 30% 96%;
 
-    --muted: 36 20% 92%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 30 20% 92%;
+    --muted-foreground: 20 10% 40%;
 
-    --accent: 44 77% 53%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 43 74% 49%;
+    --accent-foreground: 20 10% 5%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 30 30% 96%;
 
-    --border: 36 20% 88%;
-    --input: 36 20% 88%;
+    --border: 25 20% 85%;
+    --input: 25 20% 85%;
     --ring: 43 74% 49%;
 
     --radius: 0.5rem;
@@ -43,7 +43,7 @@
   }
 
   body {
-    @apply bg-law-cream text-foreground font-sans;
+    @apply bg-coffee-cream text-foreground font-sans;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -53,5 +53,6 @@
 
 /* Add a subtle paper texture to backgrounds */
 .bg-paper {
-  @apply bg-law-paper;
+  @apply bg-coffee-paper;
 }
+

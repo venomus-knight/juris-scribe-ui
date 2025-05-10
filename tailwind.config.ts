@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,14 +62,16 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom legal colors
-				law: {
-					navy: '#1a365d',
-					burgundy: '#800020',
-					cream: '#f9f7f4',
-					gold: '#d4af37',
-					paper: '#f5f3ef',
-					lightGold: '#f3ebd3',
+				// Coffee-inspired color palette
+				coffee: {
+					dark: '#3a2a1d',     // Dark coffee brown
+					medium: '#6f4e37',    // Medium coffee brown
+					light: '#9b7653',     // Light coffee brown
+					cream: '#f5f1e8',     // Coffee cream color
+					paper: '#f8f5f0',     // Subtle paper texture background
+					gold: '#d4af37',      // Gold accent
+					black: '#1a1207',     // Coffee black
+					white: '#ffffff'      // Pure white
 				}
 			},
 			borderRadius: {
