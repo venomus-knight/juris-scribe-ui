@@ -33,7 +33,7 @@ const Gavel = () => {
   );
 };
 
-// Sound block component representing Indian legal texts
+// Legal text block component representing Indian legal texts
 const LegalText = () => {
   const textRef = useRef<THREE.Mesh>(null!);
   
