@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Send, MessageSquare, Book, FileText, Calendar } from "lucide-react";
+import { Send, MessageSquare, Book, FileText, Calendar, Landmark } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 interface Message {
@@ -23,28 +23,28 @@ interface Citation {
 
 const sampleCitations: Citation[] = [
   {
-    case: "Smith v. Johnson",
-    court: "Supreme Court",
-    year: "2018",
-    citation: "583 U.S. 163",
+    case: "Maneka Gandhi v. Union of India",
+    court: "Supreme Court of India",
+    year: "1978",
+    citation: "AIR 1978 SC 597",
     relevance: 92,
-    snippet: "The Court held that in cases of contractual dispute where the language is ambiguous, the interpretation most favorable to the non-drafting party shall prevail."
+    snippet: "The Court held that the right to life and personal liberty under Article 21 of the Indian Constitution includes the right to live with human dignity and all that goes along with it."
   },
   {
-    case: "United States v. Reynolds",
-    court: "9th Circuit Court of Appeals",
-    year: "2020",
-    citation: "986 F.3d 1245",
+    case: "Vishaka v. State of Rajasthan",
+    court: "Supreme Court of India",
+    year: "1997",
+    citation: "(1997) 6 SCC 241",
     relevance: 87,
-    snippet: "The court ruled that the standard for determining 'reasonable doubt' must be articulated clearly to the jury, and failure to do so constitutes reversible error."
+    snippet: "In the absence of enacted law to provide for the effective enforcement of basic human rights of gender equality and guarantee against sexual harassment, the Court formulated guidelines to be followed at all workplaces."
   },
   {
-    case: "Jackson Properties Ltd. v. Western Financial Corp.",
-    court: "Delaware Court of Chancery",
-    year: "2019",
-    citation: "215 A.3d 792",
+    case: "Kesavananda Bharati v. State of Kerala",
+    court: "Supreme Court of India",
+    year: "1973",
+    citation: "AIR 1973 SC 1461",
     relevance: 76, 
-    snippet: "Chancellor Moore established that in commercial real estate disputes, the specific terms of the contract supersede general industry practices unless otherwise specified."
+    snippet: "The Supreme Court established the 'Basic Structure Doctrine', ruling that while Parliament has power to amend the Constitution, it cannot alter its basic structure or framework."
   }
 ];
 
@@ -76,7 +76,7 @@ const ChatInterface = () => {
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
         type: 'bot',
-        content: "Based on your query regarding contractual disputes with ambiguous language, I've found several relevant precedents. The most applicable case is Smith v. Johnson (2018), where the Supreme Court established that ambiguous contract language should be interpreted in favor of the non-drafting party. I've also included additional cases with similar rulings for your reference.",
+        content: "Based on your query regarding Article 21 of the Indian Constitution, I've found several landmark judgments. The most applicable case is Maneka Gandhi v. Union of India (1978), where the Supreme Court established that the right to life includes the right to live with human dignity. I've included additional cases that expand on constitutional rights interpretation.",
         timestamp: new Date()
       };
       
@@ -86,7 +86,7 @@ const ChatInterface = () => {
       
       toast({
         title: "Results Found",
-        description: "3 relevant precedents found for your query.",
+        description: "3 relevant Indian precedents found for your query.",
       });
     }, 2000);
   };
@@ -94,28 +94,28 @@ const ChatInterface = () => {
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-16" id="chat-interface">
       <div className="text-center mb-12">
-        <h2 className="font-serif text-3xl md:text-4xl font-bold text-law-navy mb-4">
-          Find Case Precedents Instantly
+        <h2 className="font-serif text-3xl md:text-4xl font-bold text-coffee-dark mb-4">
+          Find Indian Case Precedents Instantly
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Ask a question about your case and our AI will find relevant legal precedents to strengthen your arguments.
+          Ask a question about your case and our AI will find relevant Indian legal precedents to strengthen your arguments.
         </p>
       </div>
       
       <div className="grid md:grid-cols-7 gap-6">
         <div className="md:col-span-4 bg-white rounded-xl shadow-lg border border-gray-100">
           <div className="p-4 border-b border-gray-100 flex items-center">
-            <MessageSquare className="h-5 w-5 text-law-burgundy mr-2" />
+            <MessageSquare className="h-5 w-5 text-coffee-medium mr-2" />
             <h3 className="font-medium">Chat with LegalPrecedent AI</h3>
           </div>
           
-          <div className="h-[400px] overflow-y-auto p-4 flex flex-col space-y-4 bg-law-paper">
+          <div className="h-[400px] overflow-y-auto p-4 flex flex-col space-y-4 bg-coffee-paper">
             {messages.length === 0 ? (
               <div className="flex flex-col items-center justify-center h-full text-center text-gray-500 space-y-3">
                 <MessageSquare className="h-10 w-10 text-gray-400" />
                 <p>No messages yet. Ask a question about your case.</p>
                 <div className="text-xs max-w-sm">
-                  Example: "What precedents exist for contract disputes with ambiguous language?"
+                  Example: "What are the landmark judgments on Article 21 of the Constitution of India?"
                 </div>
               </div>
             ) : (
@@ -138,7 +138,7 @@ const ChatInterface = () => {
                   <div className="h-2 w-2 bg-gray-400 rounded-full animate-pulse"></div>
                   <div className="h-2 w-2 bg-gray-400 rounded-full animate-pulse delay-150"></div>
                   <div className="h-2 w-2 bg-gray-400 rounded-full animate-pulse delay-300"></div>
-                  <span className="text-sm text-gray-500 ml-1">Searching precedents...</span>
+                  <span className="text-sm text-gray-500 ml-1">Searching Indian precedents...</span>
                 </div>
               </div>
             )}
@@ -161,18 +161,18 @@ const ChatInterface = () => {
         
         <div className="md:col-span-3 bg-white rounded-xl shadow-lg border border-gray-100 h-[500px] overflow-y-auto">
           <div className="p-4 border-b border-gray-100 flex items-center">
-            <Book className="h-5 w-5 text-law-burgundy mr-2" />
-            <h3 className="font-medium">Relevant Precedents</h3>
+            <Book className="h-5 w-5 text-coffee-medium mr-2" />
+            <h3 className="font-medium">Relevant Indian Precedents</h3>
           </div>
           
           <div className="p-4">
             {citations.length > 0 ? (
               <div className="space-y-4">
                 {citations.map((citation, index) => (
-                  <div key={index} className="p-3 border border-gray-100 rounded-lg hover:bg-law-cream/50 transition-colors">
+                  <div key={index} className="p-3 border border-gray-100 rounded-lg hover:bg-coffee-cream/50 transition-colors">
                     <div className="flex items-center justify-between">
-                      <h4 className="font-medium text-law-navy font-serif">{citation.case}</h4>
-                      <span className="bg-law-lightGold text-law-burgundy text-xs px-2 py-1 rounded-full font-medium">
+                      <h4 className="font-medium text-coffee-dark font-serif">{citation.case}</h4>
+                      <span className="bg-coffee-gold/20 text-coffee-dark text-xs px-2 py-1 rounded-full font-medium">
                         {citation.relevance}% Match
                       </span>
                     </div>
@@ -185,19 +185,22 @@ const ChatInterface = () => {
                         <Calendar className="h-3 w-3 mr-1" />
                         {citation.year}
                       </span>
-                      <span>{citation.court}</span>
+                      <span className="flex items-center">
+                        <Landmark className="h-3 w-3 mr-1" />
+                        {citation.court}
+                      </span>
                     </div>
                     <p className="text-sm text-gray-600">{citation.snippet}</p>
-                    <button className="mt-2 text-xs text-law-burgundy hover:underline font-medium">View Full Case</button>
+                    <button className="mt-2 text-xs text-coffee-dark hover:underline font-medium">View Full Judgment</button>
                   </div>
                 ))}
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center h-[400px] text-center text-gray-500 space-y-3">
-                <Book className="h-10 w-10 text-gray-400" />
+                <Landmark className="h-10 w-10 text-gray-400" />
                 <p>No precedents found yet</p>
                 <p className="text-xs max-w-xs">
-                  Ask a question in the chat to get relevant legal precedents for your case.
+                  Ask a question in the chat to get relevant Indian legal precedents for your case.
                 </p>
               </div>
             )}
