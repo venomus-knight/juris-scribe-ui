@@ -50,7 +50,7 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-coffee-gold transition-all duration-300 group-hover:w-full"></span>
               </a>
             </HoverCardTrigger>
-            <HoverCardContent className="w-80 bg-coffee-paper/95 backdrop-blur-md border-coffee-gold/30">
+            <HoverCardContent className="w-80 bg-coffee-paper/95 backdrop-blur-md border-coffee-gold/30 animate-fade-in">
               <div className="flex flex-col gap-2">
                 <div className="flex items-start gap-2">
                   <Search className="h-4 w-4 mt-0.5 text-coffee-gold" />

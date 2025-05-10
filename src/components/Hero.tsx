@@ -21,7 +21,7 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 py-16 md:py-24 md:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center">
-          <div className="w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
+          <div className="w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0 animate-fade-in">
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-coffee-dark mb-6 leading-tight">
               The <span className="text-coffee-medium">Precedent Research</span> Platform For Indian Legal Professionals
             </h1>
@@ -54,7 +54,7 @@ const Hero = () => {
           </div>
           
           <div className="w-full lg:w-1/2 flex justify-center items-center">
-            <Card className="bg-coffee-paper/50 backdrop-blur-md rounded-xl shadow-xl border border-coffee-gold/20 max-w-md w-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+            <Card className="bg-coffee-paper/50 backdrop-blur-md rounded-xl shadow-xl border border-coffee-gold/20 max-w-md w-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 animate-fade-in">
               <CardContent className="p-4">
                 <ThreeDGavel />
                 <div className="text-center mt-4 pb-2">
